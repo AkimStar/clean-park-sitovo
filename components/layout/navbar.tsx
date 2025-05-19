@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 import { Car, Menu, X } from "lucide-react";
 import Image from "next/image";
 
-function handleSmoothScroll(e: React.MouseEvent<HTMLAnchorElement>, targetId: string) {
+function handleSmoothScroll(e: React.MouseEvent<HTMLElement>, targetId: string) {
   e.preventDefault();
   const element = document.getElementById(targetId);
   const navbarHeight = 80; // adjust if your navbar is taller
