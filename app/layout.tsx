@@ -8,8 +8,12 @@ import Footer from '@/components/layout/footer';
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 export const metadata: Metadata = {
-  title: 'АС НЕТ | Автомивка и Кафе в Ситово',
+  title: 'Clean Park | Автомивка и Кафе в Ситово',
   description: 'Професионална самообслужваща автомивка със зона за кафе в Ситово, България. Модерна и удобна със съвременно оборудване.',
+  icons: {
+    icon: '/cleanparklogo.png',
+    apple: '/cleanparklogo.png',
+  },
 };
 
 export default function RootLayout({
