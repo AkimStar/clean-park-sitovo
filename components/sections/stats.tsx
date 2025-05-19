@@ -70,8 +70,8 @@ export default function StatsSection() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16"
         >
-          <Counter value={12025} label="Автомобили измити" />
-          <Counter value={1050} label="Доволни клиенти" />
+          <Counter value={15000} suffix="+" label="Измити автомобили" />
+          <Counter value={10000} suffix="+" label="Доволни клиенти" />
           <Counter value={100} suffix="%" label="Гаранция за качество" />
         </motion.div>
       </div>

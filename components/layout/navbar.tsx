@@ -16,6 +16,16 @@ import { cn } from "@/lib/utils";
 import { Car, Menu, X } from "lucide-react";
 import Image from "next/image";
 
+function handleSmoothScroll(e: React.MouseEvent<HTMLAnchorElement>, targetId: string) {
+  e.preventDefault();
+  const element = document.getElementById(targetId);
+  const navbarHeight = 80; // adjust if your navbar is taller
+  if (element) {
+    const y = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+}
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -60,39 +70,38 @@ export default function Navbar() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#about" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    За нас
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="#services" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Услуги
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="#pricing" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Цени
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="#contact" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Контакти
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
+  <a href="#about" onClick={e => handleSmoothScroll(e, "about")}
+     className={navigationMenuTriggerStyle()}>
+    За нас
+  </a>
+</NavigationMenuItem>
+<NavigationMenuItem>
+  <a href="#services" onClick={e => handleSmoothScroll(e, "services")}
+     className={navigationMenuTriggerStyle()}>
+    Услуги
+  </a>
+</NavigationMenuItem>
+<NavigationMenuItem>
+  <a href="#pricing" onClick={e => handleSmoothScroll(e, "pricing")}
+     className={navigationMenuTriggerStyle()}>
+    Цени
+  </a>
+</NavigationMenuItem>
+<NavigationMenuItem>
+  <a href="#faq" onClick={e => handleSmoothScroll(e, "faq")}
+     className={navigationMenuTriggerStyle()}>
+    Често задавани въпроси
+  </a>
+</NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
           {/* CTA Button */}
-          <Button className="hidden md:inline-flex bg-[#0C4DF4] hover:bg-[#0A3DD2]">
-            Вход
+          <Button 
+            className="hidden md:inline-flex bg-[#0C4DF4] hover:bg-[#0A3DD2]"
+            onClick={e => handleSmoothScroll(e, "contact")}
+          >
+            Свържи се с нас
           </Button>
 
           {/* Mobile Menu Toggle */}
@@ -111,25 +120,40 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pt-4 pb-2">
-            <nav className="flex flex-col space-y-4">
-              <Link href="#" className="text-lg font-medium px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>
-                Начало
+          <div className="fixed inset-0 z-50 md:hidden min-h-screen min-w-full flex flex-col bg-white/80 backdrop-blur-2xl shadow-lg">
+            <div className="absolute top-6 left-0 w-full flex items-center justify-between px-6">
+              <Link href="/" className="flex items-center">
+                <Image src="/cleanparklogo.png" alt="Clean Park Logo" width={56} height={56} priority />
               </Link>
-              <Link href="#about" className="text-lg font-medium px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>
-                За нас
-              </Link>
-              <Link href="#services" className="text-lg font-medium px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>
-                Услуги
-              </Link>
-              <Link href="#pricing" className="text-lg font-medium px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>
-                Цени
-              </Link>
-              <Link href="#contact" className="text-lg font-medium px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>
-                Контакти
-              </Link>
-              <Button className="w-full mt-2 bg-[#0C4DF4] hover:bg-[#0A3DD2]">
-                Вход
+              <button
+                className="flex items-center justify-center p-2 rounded-full hover:bg-white/30 transition"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Затвори менюто"
+              >
+                <X className="w-7 h-7 text-[#1A2A63]" />
+              </button>
+            </div>
+            <nav className="flex flex-col items-center justify-center space-y-6 w-full flex-1 mt-24">
+              <a href="#" className="text-lg font-medium px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>
+  Начало
+</a>
+<a href="#about" className="text-lg font-medium px-2 py-1" onClick={e => { handleSmoothScroll(e, "about"); setIsMobileMenuOpen(false); }}>
+  За нас
+</a>
+<a href="#services" className="text-lg font-medium px-2 py-1" onClick={e => { handleSmoothScroll(e, "services"); setIsMobileMenuOpen(false); }}>
+  Услуги
+</a>
+<a href="#pricing" className="text-lg font-medium px-2 py-1" onClick={e => { handleSmoothScroll(e, "pricing"); setIsMobileMenuOpen(false); }}>
+  Цени
+</a>
+<a href="#faq" className="text-lg font-medium px-2 py-1" onClick={e => { handleSmoothScroll(e, "faq"); setIsMobileMenuOpen(false); }}>
+  Често задавани въпроси
+</a>
+              <Button 
+                className="mt-2 bg-[#0C4DF4] hover:bg-[#0A3DD2]"
+                onClick={e => { handleSmoothScroll(e, "contact"); setIsMobileMenuOpen(false); }}
+              >
+                Свържи се с нас
               </Button>
             </nav>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function ContactSection() {
   return (
@@ -61,10 +61,15 @@ export default function ContactSection() {
               </div>
             </div>
             
-            <div className="pt-4">
-              <h3 className="text-lg font-medium text-[#1A1A1A] mb-2">Работно време</h3>
-              <p className="text-[#4F4F4F]">Отворено 24/7</p>
-              <p className="text-[#4F4F4F]">За въпроси и поддръжка: 08:00 - 20:00</p>
+            <div className="flex items-start space-x-4 pt-4">
+              <div className="bg-white p-3 rounded-full shadow-sm">
+                <Clock className="w-6 h-6 text-[#0C4DF4]" />
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-[#1A1A1A] mb-2">Работно време</h3>
+                <p className="text-[#4F4F4F]">Отворено 24/7</p>
+                <p className="text-[#4F4F4F]">За въпроси и поддръжка: 08:00 - 20:00</p>
+              </div>
             </div>
           </motion.div>
           
@@ -77,7 +82,7 @@ export default function ContactSection() {
             className="relative h-[400px] rounded-xl overflow-hidden shadow-lg"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.1868070194844!2d27.0516199!3d44.0467346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40af8b6e438c7e05%3A0x8a1be39dcb668fc6!2z0YPQuy4g4oCe0JTQvtCx0YDRg9C00LbQsOKAnCA5LCA3NTUwINCh0LjRgtC-0LLQviDQkdGD0YDQs9Cw0YE!5e0!3m2!1sbg!2sbg!4v1712182663916!5m2!1sbg!2sbg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.1868070194844!2d27.0137943!3d44.0265811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40afdbc77ac02cd3:0x25ca2a43042fb31f!2z0JDRg9C60L7QvNCw0YLQtdGA0L3QsCDQmtCw0YDQsNC80LAgIkNsZWFuIFBhcmsi!5e0!3m2!1sbg!2sbg!4v1716140000000!5m2!1sbg!2sbg"
               width="100%"
               height="100%"
               style={{ border: 0 }}

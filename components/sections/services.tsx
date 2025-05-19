@@ -16,31 +16,31 @@ const services = [
     id: "foam-washing",
     name: "Миене с пяна",
     description: "Мощна почистваща пяна, която премахва и най-упоритите замърсявания. Формулата ни не уврежда боята и е щадяща към околната среда.",
-    image: "https://images.unsplash.com/photo-1616966376407-99ac7ba4db10?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1645966923376-33eaf7007665?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "pressure-rinse",
     name: "Изплакване под налягане",
     description: "Прецизна система за изплакване под високо налягане, която отстранява цялата пяна и замърсявания, без да оставя следи по повърхността на автомобила.",
-    image: "https://images.unsplash.com/photo-1520587929023-4042a9254714?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1605164599894-ca98960d41b6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "vacuum",
     name: "Високомощна прахосмукачка",
     description: "Професионална прахосмукачка с различни накрайници за перфектно почистване на интериора, включително и труднодостъпни места.",
-    image: "https://images.unsplash.com/photo-1620410602130-6f23e19c4206?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1657071790452-be73e1a82421?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "cafe",
     name: "Зона за кафе",
     description: "Уютна зона за изчакване с висококачествено кафе, напитки и лека храна. Перфектно място за отдих, докато автомобилът ви се суши.",
-    image: "https://images.unsplash.com/photo-1599599545579-5753dbcf1282?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1506372023823-741c83b836fe?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "promo",
     name: "Промоционални пакети",
     description: "Специални комбинирани оферти за пълно почистване на автомобила на преференциални цени. Проверете нашите промоции на място.",
-    image: "https://images.unsplash.com/photo-1558403194-611308249627?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1685643729784-89868bf5a246?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ];
 
@@ -103,7 +103,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="relative h-[400px] rounded-xl overflow-hidden shadow-lg"
+            className="relative h-[400px] rounded-xl overflow-hidden shadow-lg group"
           >
             {services.map((service) => (
               <div 
@@ -117,9 +117,9 @@ export default function ServicesSection() {
                   src={service.image}
                   alt={service.name}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform transition-filter duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-90" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-white text-2xl font-bold">{service.name}</h3>
                 </div>
@@ -130,12 +130,12 @@ export default function ServicesSection() {
             {!openItem && (
               <div className="absolute inset-0">
                 <Image
-                  src={services[0].image}
+                  src="https://images.unsplash.com/photo-1641494639075-5571f7ef486b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Услуги в автомивката"
                   fill
-                  className="object-cover opacity-70"
+                  className="object-cover opacity-70 transition-transform transition-filter duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-90" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <p className="text-white text-xl font-medium px-6 text-center">
                     Изберете услуга, за да видите повече информация

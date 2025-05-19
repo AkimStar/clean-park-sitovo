@@ -107,14 +107,7 @@ export default function Footer() {
           <p className="text-white/60 text-sm">
             &copy; {new Date().getFullYear()} АС НЕТ - Всички права запазени.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-white/60 hover:text-white text-sm transition-colors">
-              Политика за поверителност
-            </Link>
-            <Link href="#" className="text-white/60 hover:text-white text-sm transition-colors">
-              Условия за ползване
-            </Link>
-          </div>
+          
         </div>
       </div>
     </footer>

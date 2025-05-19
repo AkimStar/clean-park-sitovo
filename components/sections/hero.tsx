@@ -4,6 +4,16 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+function handleSmoothScroll(e: React.MouseEvent<HTMLAnchorElement>, targetId: string) {
+  e.preventDefault();
+  const element = document.getElementById(targetId);
+  const navbarHeight = 80; // adjust if your navbar is taller
+  if (element) {
+    const y = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+}
+
 export default function HeroSection() {
   return (
     <section className="relative pt-28 pb-16 md:py-32 overflow-hidden">
@@ -32,7 +42,7 @@ export default function HeroSection() {
                 className="bg-[#0C4DF4] hover:bg-[#0A3DD2] text-white px-6 py-2 text-lg"
                 asChild
               >
-                <a href="#about">За нас</a>
+                <a href="#about" onClick={e => handleSmoothScroll(e, "about")}>За нас</a>
               </Button>
               
               <Button 
@@ -40,7 +50,7 @@ export default function HeroSection() {
                 className="border-[#0C4DF4] text-[#0C4DF4] hover:bg-[#0C4DF4]/10 px-6 py-2 text-lg"
                 asChild
               >
-                <a href="#contact">Контакти</a>
+                <a href="#contact" onClick={e => handleSmoothScroll(e, "contact")}>Контакти</a>
               </Button>
             </div>
           </motion.div>
@@ -50,17 +60,17 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative h-[300px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl"
+            className="relative h-[300px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl group"
           >
             <Image
               src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
               alt="Модерна автомивка"
               fill
-              className="object-cover"
+              className="object-cover transition-transform transition-filter duration-500 group-hover:scale-105 group-hover:brightness-110"
               priority
             />
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#0C4DF4]/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#0C4DF4]/20 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-90" />
           </motion.div>
         </div>
       </div>

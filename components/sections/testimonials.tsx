@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import Image from "next/image";
@@ -51,15 +51,16 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
-  
-  const x = useTransform(scrollYProgress, [0, 1], [0, -1000]);
-  
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      setWidth(containerRef.current.scrollWidth / 2); // width of one set
+    }
+  }, []);
+
   return (
-    <section ref={containerRef} className="py-16 bg-[#F0F8FC] overflow-hidden">
+    <section className="py-16 bg-[#F0F8FC] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,73 +78,50 @@ export default function TestimonialsSection() {
         </motion.div>
         
         {/* Moving testimonials */}
-        <motion.div 
-          style={{ x }}
-          className="flex space-x-6"
-        >
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="w-[350px] flex-shrink-0 bg-white/80 backdrop-blur-sm border border-gray-100 shadow-md">
-              <CardHeader className="pb-2 pt-6">
-                <div className="flex justify-between items-start">
-                  <div className="flex items-center space-x-4">
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        fill
-                        className="object-cover"
-                      />
+        <div ref={containerRef} className="w-full overflow-hidden">
+          <motion.div
+            className="flex space-x-6"
+            animate={{ x: [0, width ? -width : 0] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 20,
+              ease: "linear"
+            }}
+            style={{ x: 0 }}
+          >
+            {[...testimonials, ...testimonials].map((testimonial, idx) => (
+              <Card key={testimonial.id + '-' + idx} className="w-[350px] flex-shrink-0 bg-white/80 backdrop-blur-sm border border-gray-100 shadow-md">
+                <CardHeader className="pb-2 pt-6">
+                  <div className="flex justify-between items-start">
+                    <div className="flex items-center space-x-4">
+                      <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                        <Image
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="font-medium text-[#1A1A1A]">{testimonial.name}</h3>
+                        <p className="text-sm text-[#4F4F4F]">{testimonial.role}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-medium text-[#1A1A1A]">{testimonial.name}</h3>
-                      <p className="text-sm text-[#4F4F4F]">{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <div className="flex">
-                    {Array.from({ length: testimonial.rating }).map((_, idx) => (
-                      <Star key={idx} className="w-4 h-4 fill-[#FFD600] text-[#FFD600]" />
-                    ))}
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-[#4F4F4F]">"{testimonial.content}"</p>
-              </CardContent>
-            </Card>
-          ))}
-          
-          {/* Duplicate for infinite scroll effect */}
-          {testimonials.map((testimonial) => (
-            <Card key={`${testimonial.id}-dup`} className="w-[350px] flex-shrink-0 bg-white/80 backdrop-blur-sm border border-gray-100 shadow-md">
-              <CardHeader className="pb-2 pt-6">
-                <div className="flex justify-between items-start">
-                  <div className="flex items-center space-x-4">
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-[#1A1A1A]">{testimonial.name}</h3>
-                      <p className="text-sm text-[#4F4F4F]">{testimonial.role}</p>
+                    <div className="flex">
+                      {Array.from({ length: testimonial.rating }).map((_, starIdx) => (
+                        <Star key={starIdx} className="w-4 h-4 fill-[#FFD600] text-[#FFD600]" />
+                      ))}
                     </div>
                   </div>
-                  <div className="flex">
-                    {Array.from({ length: testimonial.rating }).map((_, idx) => (
-                      <Star key={idx} className="w-4 h-4 fill-[#FFD600] text-[#FFD600]" />
-                    ))}
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-[#4F4F4F]">"{testimonial.content}"</p>
-              </CardContent>
-            </Card>
-          ))}
-        </motion.div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#4F4F4F]">"{testimonial.content}"</p>
+                </CardContent>
+              </Card>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
