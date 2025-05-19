@@ -20,7 +20,7 @@ export default function HeroSection() {
             className="flex flex-col space-y-6 md:pr-8"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1A1A1A]">
-              Професионална самообслужваща автомивка и кафе
+              Професионална автомивка на самоосблужване и кафе
             </h1>
             
             <p className="text-lg text-[#4F4F4F]">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Car, Facebook, Instagram, PhoneCall } from "lucide-react";
 
 export default function Footer() {
@@ -8,9 +9,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <Car className="w-8 h-8 text-white" />
-              <span className="text-xl font-bold">АС НЕТ</span>
+            <Link href="/" className="flex items-center">
+              <Image src="/cleanparklogo.png" alt="Clean Park Logo" width={64} height={64} priority />
             </Link>
             <p className="text-white/80 max-w-xs">
               Професионална самообслужваща автомивка със зона за кафе в Ситово.

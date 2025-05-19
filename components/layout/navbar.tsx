@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Car, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,10 +45,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <Car className="w-8 h-8 text-[#0C4DF4]" />
-            <span className="text-xl font-bold text-[#1A1A1A]">АС НЕТ</span>
-          </Link>
+          <Link href="/" className="flex items-center">
+  <Image src="/cleanparklogo.png" alt="Clean Park Logo" width={64} height={64} priority />
+</Link>
 
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:flex">
