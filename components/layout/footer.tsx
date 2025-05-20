@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center">
-              <Image src="/cleanparklogo.png" alt="Clean Park Logo" width={64} height={64} priority />
+              <Image src="/logo.png" alt="Clean Park Logo" width={64} height={64} priority />
             </Link>
             <p className="text-white/80 max-w-xs">
               Професионална самообслужваща автомивка със зона за кафе в Ситово.
