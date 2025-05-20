@@ -99,7 +99,7 @@ export default function ServicesSection() {
                   className="border border-gray-200 rounded-lg mb-4 overflow-hidden"
                 >
                   <AccordionTrigger className="px-6 py-4 hover:bg-[#F0F8FC]/50 transition-colors">
-                    <span className="text-xl font-medium text-[#1A1A1A]">{service.name}</span>
+                    <span className="text-xl font-medium text-[#1A1A1A] text-left w-full">{service.name}</span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-6">
                     <p className="text-[#4F4F4F]">{service.description}</p>

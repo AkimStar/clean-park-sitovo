@@ -46,6 +46,22 @@ const testimonials = [
     content: "Открита, да ни е честита.",
     rating: 5,
     image: "https://lh3.googleusercontent.com/a-/ALV-UjUz3MRWz6_ZyHkAOorANYPbRlRROcFCVgOnQxikfG1QxNfR6Nlo=w72-h72-p-rp-mo-ba3-br100"
+  },
+  {
+    id: 6,
+    name: "Георги Иванов",
+    role: "Доволен клиент",
+    content: "Изключително чисто и удобно място. Персоналът е винаги учтив и отзивчив. Препоръчвам на всички!",
+    rating: 5,
+    image: "https://randomuser.me/api/portraits/men/31.jpg"
+  },
+  {
+    id: 7,
+    name: "Стефан Петров",
+    role: "Редовен клиент",
+    content: "Винаги оставам доволен от услугите. Бързо, лесно и качествено обслужване.",
+    rating: 5,
+    image: "https://randomuser.me/api/portraits/men/32.jpg"
   }
 ];
 
