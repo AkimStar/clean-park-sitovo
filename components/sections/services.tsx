@@ -28,7 +28,7 @@ const services = [
     id: "vacuum",
     name: "Високомощна прахосмукачка",
     description: "Професионална прахосмукачка с различни накрайници за перфектно почистване на интериора, включително и труднодостъпни места.",
-    image: "https://images.unsplash.com/photo-1657071790452-be73e1a82421?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "/vacuum.jfif"
   },
   {
     id: "cafe",
