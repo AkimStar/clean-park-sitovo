@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   title: 'Clean Park | Автомивка и Кафе в Ситово',
   description: 'Професионална самообслужваща автомивка със зона за кафе в Ситово, България. Модерна и удобна със съвременно оборудване.',
   icons: {
-    icon: '/cleanparklogo.png',
-    apple: '/cleanparklogo.png',
+    icon: '/logo.png',
+    apple: '/logo.png',
   },
 };
 
