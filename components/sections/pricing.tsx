@@ -4,116 +4,95 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { ShowerHead, Droplets, Sparkle, SprayCan, Star } from "lucide-react";
 
-const pricingPlans = [
-  {
-    id: "basic",
-    name: "Бързо измиване",
-    price: "5 лв",
-    description: "Идеално за почистване на лека мръсотия",
-    features: [
-      "Изплакване под налягане",
-      "Безконтактно плащане",
-      "Бърз процес (5 минути)",
-    ],
-    popular: false
-  },
-  {
-    id: "standard",
-    name: "Пълна програма",
-    price: "8 лв",
-    description: "Най-използваната програма за почистване",
-    features: [
-      "Пяна + изплакване + восък",
-      "Високомощна прахосмукачка",
-      "Двойно измиване (10 минути)",
-    ],
-    popular: true
-  },
-  {
-    id: "premium",
-    name: "Премиум почистване",
-    price: "12 лв",
-    description: "Цялостно почистване с екстри",
-    features: [
-      "Всички услуги + ароматизатор",
-      "Подарък кафе",
-      "Пълна програма (15 минути)",
-    ],
-    popular: false
-  }
+const services = [
+  { icon: ShowerHead, name: "Водоструйка", time: "2:30 мин" },
+  { icon: Droplets, name: "Вода без петна", time: "2:10 мин" },
+  { icon: SprayCan, name: "Активна пяна", time: "1:30 мин" },
+  { icon: Star, name: "Вакса", time: "2:00 мин" },
+  { icon: Sparkle, name: "Безконтактно", time: "1:30 мин" }
 ];
 
 export default function PricingSection() {
   return (
     <section id="pricing" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">
-            Изберете своя пакет
-          </h2>
-          <p className="mt-4 text-lg text-[#4F4F4F] max-w-3xl mx-auto">
-            Предлагаме различни пакети според вашите нужди и бюджет
-          </p>
-        </motion.div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {pricingPlans.map((plan, index) => (
-            <motion.div
-              key={plan.id}
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="mb-10">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-[#1a1a1a] text-center mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            Цени и програми
+          </motion.h2>
+        </div>
+        <div className="w-full flex flex-col md:flex-row md:items-start md:justify-center gap-2 md:gap-12">
+          {/* Left: Section Description */}
+          <div className="flex-1 max-w-xl mx-auto md:mx-0 text-left">
+            <motion.p
+              className="text-base md:text-lg text-[#4F4F4F] mb-3 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <Card className={`h-full flex flex-col ${
-                plan.popular 
-                  ? "border-[#0C4DF4] shadow-lg shadow-[#0C4DF4]/10" 
-                  : "border-gray-200"
-              }`}>
-                {plan.popular && (
-                  <div className="bg-[#0C4DF4] text-white text-center py-1 text-sm font-medium">
-                    Най-популярен
+              В нашата автомивка работим с жетонна система, която ви дава максимална гъвкавост и контрол върху времето и услугите, които използвате. Всеки жетон струва 2 лв и може да бъде използван за различни програми според вашите нужди.
+            </motion.p>
+            <motion.p
+              className="text-base md:text-lg text-[#4F4F4F] mb-3 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              Изберете желаната програма и добавете повече жетони за по-дълго и по-детайлно почистване. Нашите услуги включват висококачествено измиване, безконтактно почистване, вакса и още много други, за да осигурим най-доброто за вашия автомобил. Доверете се на нашия опит и модерно оборудване за блестящи резултати всеки път.
+            </motion.p>
+            <motion.p
+              className="text-base md:text-lg text-[#4F4F4F] leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.45 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              Нашият екип е винаги на разположение да ви помогне с избор на програма и да отговори на всички ваши въпроси. Стремим се да осигурим бързо, качествено и удобно обслужване, за да останете доволни след всяко посещение. Ако имате специални изисквания или нужда от съвет, не се колебайте да се обърнете към нас. Вашето удовлетворение е наш приоритет и ние се стремим да надминем вашите очаквания при всяко посещение.
+            </motion.p>
+          </div>
+
+          {/* Right: Timeline */}
+          <div className="flex-1 max-w-lg relative mt-10 md:mt-0">
+            {/* Vertical Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#6cb2eb]/50 z-0" aria-hidden="true"></div>
+            <ul className="space-y-12">
+              {services.map(({ icon: Icon, name, time }, idx) => (
+                <motion.li
+                  key={name}
+                  className="relative flex items-center z-10 group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: idx * 0.15 }}
+                  viewport={{ once: true, margin: '-100px' }}
+                >
+                  {/* Circle with icon */}
+                  <div className="flex flex-col items-center mr-6">
+                    <div className="w-7 h-7 rounded-full bg-white border-2 border-[#6cb2eb] flex items-center justify-center shadow group-hover:shadow-lg transition">
+                      <Icon className="w-5 h-5 text-[#6cb2eb]" />
+                    </div>
+                    {idx !== services.length - 1 && (
+                      <div className="w-px flex-1 bg-[#6cb2eb]/50" style={{ minHeight: '36px', marginTop: '2px' }} />
+                    )}
                   </div>
-                )}
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-2xl font-bold text-[#1A1A1A]">{plan.name}</CardTitle>
-                  <div className="mt-2">
-                    <span className="text-3xl font-bold text-[#1A1A1A]">{plan.price}</span>
+                  {/* Service info */}
+                  <div className="flex flex-col text-left pl-2">
+                    <span className="text-base md:text-lg font-semibold text-[#34495e]">{name}</span>
+                    <span className="text-[#6cb2eb] text-sm md:text-base font-medium">{time}</span>
                   </div>
-                  <CardDescription className="mt-2">{plan.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <Check className="w-5 h-5 text-[#0C4DF4] mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-[#4F4F4F]">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button 
-                    variant={plan.popular ? "default" : "outline"} 
-                    className={`w-full ${
-                      plan.popular 
-                        ? "bg-[#0C4DF4] hover:bg-[#0A3DD2]" 
-                        : "border-[#0C4DF4] text-[#0C4DF4] hover:bg-[#0C4DF4]/10"
-                    }`}
-                  >
-                    Изберете
-                  </Button>
-                </CardFooter>
-              </Card>
-            </motion.div>
-          ))}
+                </motion.li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
