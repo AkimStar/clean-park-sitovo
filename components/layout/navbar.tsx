@@ -93,6 +93,12 @@ export default function Navbar() {
     Често задавани въпроси
   </a>
 </NavigationMenuItem>
+<NavigationMenuItem>
+  <a href="#gallery" onClick={e => handleSmoothScroll(e, "gallery")}
+     className={navigationMenuTriggerStyle()}>
+    Галерия
+  </a>
+</NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
@@ -148,6 +154,9 @@ export default function Navbar() {
 </a>
 <a href="#faq" className="text-lg font-medium px-2 py-1" onClick={e => { handleSmoothScroll(e, "faq"); setIsMobileMenuOpen(false); }}>
   Често задавани въпроси
+</a>
+<a href="#gallery" className="text-lg font-medium px-2 py-1" onClick={e => { handleSmoothScroll(e, "gallery"); setIsMobileMenuOpen(false); }}>
+  Галерия
 </a>
               <Button 
                 className="mt-2 bg-[#0C4DF4] hover:bg-[#0A3DD2]"

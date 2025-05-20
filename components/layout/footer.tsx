@@ -60,6 +60,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="#gallery" className="text-white/80 hover:text-white transition-colors">
+                  Галерия
+                </Link>
+              </li>
+              <li>
                 <Link href="#contact" className="text-white/80 hover:text-white transition-colors">
                   Контакти
                 </Link>
