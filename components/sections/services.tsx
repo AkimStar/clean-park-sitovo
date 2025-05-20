@@ -40,7 +40,7 @@ const services = [
     id: "promo",
     name: "Промоционални пакети",
     description: "Специални комбинирани оферти за пълно почистване на автомобила на преференциални цени. Проверете нашите промоции на място.",
-    image: "https://images.unsplash.com/photo-1685643729784-89868bf5a246?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "/card.jfif"
   },
   {
     id: "ev-charging",

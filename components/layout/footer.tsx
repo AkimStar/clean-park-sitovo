@@ -89,14 +89,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <span className="text-white/80">Телефон:</span>
-                <a href="tel:0888047555" className="flex items-center hover:text-[#FFD600] transition-colors">
-                  <PhoneCall className="w-4 h-4 mr-1" /> 0888 047 555
+                <a href="tel:024113868" className="flex items-center hover:text-[#FFD600] transition-colors">
+                  <PhoneCall className="w-4 h-4 mr-1" /> 02 411 3868
                 </a>
               </li>
               <li className="flex items-start space-x-3">
                 <span className="text-white/80">Имейл:</span>
-                <a href="mailto:info@asnet.bg" className="hover:text-[#FFD600] transition-colors">
-                  info@asnet.bg
+                <a href="mailto:asnet@abv.bg" className="hover:text-[#FFD600] transition-colors">
+                  asnet@abv.bg
                 </a>
               </li>
             </ul>

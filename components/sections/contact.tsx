@@ -47,7 +47,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="text-lg font-medium text-[#1A1A1A]">Телефон</h3>
-                <p className="text-[#4F4F4F]">0888 047 555</p>
+                <a href="tel:024113868" className="text-[#4F4F4F] hover:text-[#0C4DF4] transition-colors">02 411 3868</a>
               </div>
             </div>
             
@@ -57,7 +57,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="text-lg font-medium text-[#1A1A1A]">Имейл</h3>
-                <p className="text-[#4F4F4F]">info@asnet.bg</p>
+                <a href="mailto:asnet@abv.bg" className="text-[#4F4F4F] hover:text-[#0C4DF4] transition-colors">asnet@abv.bg</a>
               </div>
             </div>
             
