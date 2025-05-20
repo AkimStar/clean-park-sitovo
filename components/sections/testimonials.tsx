@@ -9,43 +9,43 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
-    name: "Димитър Иванов",
+    name: "Боран Динчер",
     role: "Клиент от 2 години",
-    content: "Изключително удобно и чисто място. Винаги използвам тази автомивка. Резултатите са перфектни!",
+    content: "След няколко ползвания на автомивката на самообслужване АСНЕТ, мога с увереност да кажа, че това е една от най-добрите автомивки в радиус от 25-30 километра.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjWNoAEHyuB1OrYq1aC_w6OG3juW4pmIxcSpH_v7--gaLqV72pqX=w72-h72-p-rp-mo-ba6-br100"
   },
   {
     id: 2,
-    name: "Мария Петрова",
+    name: "Меди Джошкун",
     role: "Доволен клиент",
-    content: "Качеството на измиване е невероятно, а зоната за кафе е перфектен бонус. Препоръчвам!",
+    content: "Има всичко нужно за почистване на автомобила, зарядна станция за електрически автомобили и кафе.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    image: "https://lh3.googleusercontent.com/a/ACg8ocIOLQE4opa7bs63mjdb7DLCjySOG50q3TM0z0TXzCXj_SBxYg=w72-h72-p-rp-mo-ba4-br100"
   },
   {
     id: 3,
-    name: "Георги Николов",
+    name: "Ивелин Радев",
     role: "Редовен клиент",
-    content: "Автомивката разполага с най-добрите машини. Колата ми винаги изглежда като нова след измиване тук.",
+    content: "Чудесно изпълнение!",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    image: "https://lh3.googleusercontent.com/a/ACg8ocK-isY6mQkXIZzqpbII8c6SPDFxcOcCO8LPg9TvIl0L6MgS=w72-h72-p-rp-mo-ba4-br100"
   },
   {
     id: 4,
-    name: "Петя Тодорова",
-    role: "Нов клиент",
-    content: "Първият път използвах услугите и останах изключително доволна. Определено ще се върна отново!",
+    name: "Д-р Владимир Солаков",
+    role: "Ветеринарен лекар",
+    content: "Отлично направено и удобно за работа съоръжение. Препоръчвам!",
     rating: 4,
-    image: "https://images.unsplash.com/photo-1628260412297-a3377e45006f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjV7ZL9TUyQjCTRg_Yyft0S64qyMUF7bmjzuAIAd4D7ywNeFctGQPg=w72-h72-p-rp-mo-ba5-br100"
   },
   {
     id: 5,
-    name: "Борис Стоянов",
-    role: "Бизнес клиент",
-    content: "Поддържам фирмения автопарк чист благодарение на тази автомивка. Бързо и ефективно обслужване!",
+    name: "Ергин Ахмед",
+    role: "Доволен клиент",
+    content: "Открита, да ни е честита.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjUz3MRWz6_ZyHkAOorANYPbRlRROcFCVgOnQxikfG1QxNfR6Nlo=w72-h72-p-rp-mo-ba3-br100"
   }
 ];
 
