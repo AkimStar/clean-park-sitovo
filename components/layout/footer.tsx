@@ -13,7 +13,7 @@ export default function Footer() {
               <Image src="/logo.png" alt="Clean Park Logo" width={64} height={64} priority />
             </Link>
             <p className="text-white/80 max-w-xs">
-              Професионална самообслужваща автомивка със зона за кафе в Ситово.
+            Професионална автомивка на самообслужване със зарядна станция за електромобили и зона за кафе и студени напитки.
             </p>
             <div className="flex space-x-4 pt-2">
               <a 

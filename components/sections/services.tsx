@@ -22,7 +22,7 @@ const services = [
     id: "pressure-rinse",
     name: "Изплакване под налягане",
     description: "Прецизна система за изплакване под високо налягане, която отстранява цялата пяна и замърсявания, без да оставя следи по повърхността на автомобила.",
-    image: "https://images.unsplash.com/photo-1605164599894-ca98960d41b6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "/wash.png"
   },
   {
     id: "vacuum",
