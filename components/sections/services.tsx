@@ -14,7 +14,7 @@ import Image from "next/image";
 const services = [
   {
     id: "foam-washing",
-    name: "Миене с пяна",
+    name: "Измиване с активна пяна",
     description: "Мощна почистваща пяна, която премахва и най-упоритите замърсявания. Формулата ни не уврежда боята и е щадяща към околната среда.",
     image: "https://images.unsplash.com/photo-1645966923376-33eaf7007665?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
@@ -41,6 +41,12 @@ const services = [
     name: "Промоционални пакети",
     description: "Специални комбинирани оферти за пълно почистване на автомобила на преференциални цени. Проверете нашите промоции на място.",
     image: "https://images.unsplash.com/photo-1685643729784-89868bf5a246?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: "ev-charging",
+    name: "Зарядна станция за електромобили",
+    description: "Модерна зарядна станция, подходяща за всички видове електромобили. Бързо и удобно зареждане, докато се наслаждавате на кафе или почиствате автомобила си. Разполагаме с универсални конектори и безопасна среда за зареждане.",
+    image: "/station.jfif"
   }
 ];
 
@@ -66,7 +72,7 @@ export default function ServicesSection() {
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-10 items-stretch">
           {/* Left Column - Accordion */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -103,7 +109,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="relative h-[400px] rounded-xl overflow-hidden shadow-lg group"
+            className="relative h-full min-h-[400px] rounded-xl overflow-hidden shadow-lg group flex-1"
           >
             {services.map((service) => (
               <div 

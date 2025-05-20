@@ -53,7 +53,7 @@ export default function HeroSection() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-lg">
             Професионална автомивка{' '}
             <span className="bg-gradient-to-r from-white to-[#0c7ded] bg-clip-text text-transparent">
-              на самообслужване и кафе
+              на самообслужване
             </span>
           </h1>
           <p className="text-lg text-white drop-shadow-md">
@@ -119,7 +119,7 @@ export default function HeroSection() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base text-[#4F4F4F]">
-                  Зона за отдих, докато автомобилът ви блести от чистота.
+                Място за отдих, кафе и зарядна станция за електромобили.
                 </CardDescription>
               </CardContent>
             </Card>
