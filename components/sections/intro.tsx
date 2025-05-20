@@ -63,9 +63,16 @@ export default function IntroSection() {
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-[#1A1A1A] font-medium">100% удовлетвореност</span>
-                <span className="bg-[#FFD600] text-[#1A1A1A] text-xs px-2 py-1 rounded-full font-medium">
+                <button
+                  type="button"
+                  className="bg-[#FFD600] text-[#1A1A1A] text-xs px-2 py-1 rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-[#0C4DF4]/50 transition"
+                  onClick={() => {
+                    const el = document.getElementById('testimonials');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Доказано
-                </span>
+                </button>
               </div>
             </div>
           </motion.div>
