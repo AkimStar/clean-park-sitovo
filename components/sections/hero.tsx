@@ -33,7 +33,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-0 md:py-0 overflow-hidden">
       {/* Full background image */}
       <Image
-        src="/hero1.jpeg"
+        src="/hero.png"
         alt="Модерна автомивка"
         fill
         className="object-cover w-full h-full absolute inset-0 z-0"
