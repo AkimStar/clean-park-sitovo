@@ -33,7 +33,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-0 md:py-0 overflow-hidden">
       {/* Full background image */}
       <Image
-        src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        src="/hero1.jpeg"
         alt="Модерна автомивка"
         fill
         className="object-cover w-full h-full absolute inset-0 z-0"
@@ -51,9 +51,9 @@ export default function HeroSection() {
           className="flex flex-col space-y-6"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-lg">
-            Професионална автомивка{' '}
+            Автомивка на самообслужване{' '}
             <span className="bg-gradient-to-r from-white to-[#0c7ded] bg-clip-text text-transparent">
-              на самообслужване
+              Clean Park
             </span>
           </h1>
           <p className="text-lg text-white drop-shadow-md">
