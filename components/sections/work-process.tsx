@@ -73,15 +73,15 @@ export default function WorkProcessSection() {
             <motion.div 
               key={step.id}
               variants={itemVariants}
-              className="bg-white rounded-xl p-6 shadow-md relative overflow-hidden group"
+              className="bg-white rounded-xl p-6 shadow-md relative overflow-hidden group border-t-4 border-[#ffe001]"
             >
               {/* Step Number Badge */}
-              <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-[#0C4DF4] text-white flex items-center justify-center font-bold text-xl z-10">
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-[#ffe001] text-[#1A1A1A] flex items-center justify-center font-bold text-xl z-10 shadow-[0_2px_8px_#ffe00133]">
                 {String(step.id).padStart(2, '0')}
               </div>
               
               {/* Icon */}
-              <div className="w-16 h-16 rounded-full bg-[#0C4DF4]/10 flex items-center justify-center mb-6 text-[#0C4DF4]">
+              <div className="w-16 h-16 rounded-full bg-[#ffe001]/20 flex items-center justify-center mb-6 text-[#ffe001] border-2 border-[#ffe001] shadow-[0_0_0_4px_#ffe00122]">
                 <step.icon className="w-8 h-8" />
               </div>
               

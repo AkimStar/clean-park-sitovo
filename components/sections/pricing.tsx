@@ -64,7 +64,7 @@ export default function PricingSection() {
           {/* Right: Timeline */}
           <div className="flex-1 max-w-lg relative mt-10 md:mt-0">
             {/* Vertical Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#6cb2eb]/50 z-0" aria-hidden="true"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#ffe001]/60 z-0" aria-hidden="true"></div>
             <ul className="space-y-12">
               {services.map(({ icon: Icon, name, time }, idx) => (
                 <motion.li
@@ -77,17 +77,17 @@ export default function PricingSection() {
                 >
                   {/* Circle with icon */}
                   <div className="flex flex-col items-center mr-6">
-                    <div className="w-7 h-7 rounded-full bg-white border-2 border-[#6cb2eb] flex items-center justify-center shadow group-hover:shadow-lg transition">
-                      <Icon className="w-5 h-5 text-[#6cb2eb]" />
+                    <div className="w-7 h-7 rounded-full bg-white border-2 border-[#ffe001] flex items-center justify-center shadow group-hover:shadow-lg transition">
+                      <Icon className="w-5 h-5 text-[#ffe001]" />
                     </div>
                     {idx !== services.length - 1 && (
-                      <div className="w-px flex-1 bg-[#6cb2eb]/50" style={{ minHeight: '36px', marginTop: '2px' }} />
+                      <div className="w-px flex-1 bg-[#ffe001]/60" style={{ minHeight: '36px', marginTop: '2px' }} />
                     )}
                   </div>
                   {/* Service info */}
                   <div className="flex flex-col text-left pl-2">
                     <span className="text-base md:text-lg font-semibold text-[#34495e]">{name}</span>
-                    <span className="text-[#6cb2eb] text-sm md:text-base font-medium">{time}</span>
+                    <span className="text-[#ffe001] text-sm md:text-base font-medium">{time}</span>
                   </div>
                 </motion.li>
               ))}

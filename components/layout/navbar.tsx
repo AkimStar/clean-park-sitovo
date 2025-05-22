@@ -104,7 +104,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <Button 
-            className="hidden md:inline-flex bg-[#0C4DF4] hover:bg-[#0A3DD2]"
+            className="hidden md:inline-flex bg-[#ffe001] hover:bg-[#efd205]"
             onClick={e => handleSmoothScroll(e, "contact")}
           >
             Свържи се с нас
@@ -159,7 +159,7 @@ export default function Navbar() {
   Галерия
 </a>
               <Button 
-                className="mt-2 bg-[#0C4DF4] hover:bg-[#0A3DD2]"
+                className="mt-2 bg-[#ffe001] hover:bg-[#efd205]"
                 onClick={e => { handleSmoothScroll(e, "contact"); setIsMobileMenuOpen(false); }}
               >
                 Свържи се с нас

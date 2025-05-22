@@ -52,7 +52,7 @@ export default function HeroSection() {
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-lg">
             Автомивка на самообслужване{' '}
-            <span className="bg-gradient-to-r from-white to-[#0c7ded] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white to-[#efd205] bg-clip-text text-transparent">
               Clean Park
             </span>
           </h1>
@@ -60,10 +60,10 @@ export default function HeroSection() {
             Модерна и удобна автомивка със зона за кафе, където сами почиствате автомобила си с най-съвременно оборудване.
           </p>
           <div className="flex flex-wrap gap-4 pt-2 justify-center">
-            <Button className="bg-[#0C4DF4] hover:bg-[#0A3DD2] text-white px-6 py-2 text-lg" asChild>
+            <Button className="bg-[#ffe001] hover:bg-[#efd205] text-white px-6 py-2 text-lg" asChild>
               <a href="#about" onClick={e => handleSmoothScroll(e, "about")}>За нас</a>
             </Button>
-            <Button variant="outline" className="border-[#0C4DF4] text-[#0C4DF4] hover:bg-[#0C4DF4]/10 px-6 py-2 text-lg" asChild>
+            <Button variant="outline" className="border-[#0C4DF4] text-[#ffe001] hover:bg-[#0C4DF4]/10 px-6 py-2 text-lg" asChild>
               <a href="#contact" onClick={e => handleSmoothScroll(e, "contact")}>Контакти</a>
             </Button>
           </div>
@@ -81,7 +81,7 @@ export default function HeroSection() {
             <Card className="h-full border border-gray-100 shadow-md hover:shadow-xl transition-shadow bg-white/80 backdrop-blur-sm">
               <CardHeader className="pb-2">
                 <div className="w-14 h-14 rounded-full bg-[#0C4DF4]/10 flex items-center justify-center mb-4">
-                  <Sparkles className="w-7 h-7 text-[#0C4DF4]" />
+                  <Sparkles className="w-7 h-7 text-[#ffe001]" />
                 </div>
                 <CardTitle className="text-xl text-[#1A1A1A]">Иновативна Техника</CardTitle>
               </CardHeader>
@@ -97,7 +97,7 @@ export default function HeroSection() {
             <Card className="h-full border border-gray-100 shadow-md hover:shadow-xl transition-shadow bg-white/80 backdrop-blur-sm">
               <CardHeader className="pb-2">
                 <div className="w-14 h-14 rounded-full bg-[#0C4DF4]/10 flex items-center justify-center mb-4">
-                  <Award className="w-7 h-7 text-[#0C4DF4]" />
+                  <Award className="w-7 h-7 text-[#ffe001]" />
                 </div>
                 <CardTitle className="text-xl text-[#1A1A1A]">Перфектно Качество</CardTitle>
               </CardHeader>
@@ -113,7 +113,7 @@ export default function HeroSection() {
             <Card className="h-full border border-gray-100 shadow-md hover:shadow-xl transition-shadow bg-white/80 backdrop-blur-sm">
               <CardHeader className="pb-2">
                 <div className="w-14 h-14 rounded-full bg-[#0C4DF4]/10 flex items-center justify-center mb-4">
-                  <Coffee className="w-7 h-7 text-[#0C4DF4]" />
+                  <Coffee className="w-7 h-7 text-[#ffe001]" />
                 </div>
                 <CardTitle className="text-xl text-[#1A1A1A]">Кафе и Комфорт</CardTitle>
               </CardHeader>

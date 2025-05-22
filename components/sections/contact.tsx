@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-16 bg-[#F0F8FC]">
+    <section id="contact" className="py-16 bg-[#fffbe6]">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function ContactSection() {
           >
             <div className="flex items-start space-x-4">
               <div className="bg-white p-3 rounded-full shadow-sm">
-                <MapPin className="w-6 h-6 text-[#0C4DF4]" />
+                <MapPin className="w-6 h-6 text-[#ffe001]" />
               </div>
               <div>
                 <h3 className="text-lg font-medium text-[#1A1A1A]">Адрес</h3>
@@ -43,7 +43,7 @@ export default function ContactSection() {
             
             <div className="flex items-start space-x-4">
               <div className="bg-white p-3 rounded-full shadow-sm">
-                <Phone className="w-6 h-6 text-[#0C4DF4]" />
+                <Phone className="w-6 h-6 text-[#ffe001]" />
               </div>
               <div>
                 <h3 className="text-lg font-medium text-[#1A1A1A]">Телефон</h3>
@@ -53,7 +53,7 @@ export default function ContactSection() {
             
             <div className="flex items-start space-x-4">
               <div className="bg-white p-3 rounded-full shadow-sm">
-                <Mail className="w-6 h-6 text-[#0C4DF4]" />
+                <Mail className="w-6 h-6 text-[#ffe001]" />
               </div>
               <div>
                 <h3 className="text-lg font-medium text-[#1A1A1A]">Имейл</h3>
@@ -63,7 +63,7 @@ export default function ContactSection() {
             
             <div className="flex items-start space-x-4 pt-4">
               <div className="bg-white p-3 rounded-full shadow-sm">
-                <Clock className="w-6 h-6 text-[#0C4DF4]" />
+                <Clock className="w-6 h-6 text-[#ffe001]" />
               </div>
               <div>
                 <h3 className="text-lg font-medium text-[#1A1A1A] mb-2">Работно време</h3>

@@ -46,7 +46,7 @@ export default function IntroSection() {
             <ul className="space-y-3">
               {["24/7 достъп", "Безконтактно плащане", "Зона за кафе и напитки", "Екологични почистващи продукти"].map((item, index) => (
                 <li key={index} className="flex items-center space-x-3">
-                  <CheckCircle2 className="flex-shrink-0 w-6 h-6 text-[#0C4DF4]" />
+                  <CheckCircle2 className="flex-shrink-0 w-6 h-6 text-[#ffe001]" />
                   <span className="text-[#4F4F4F]">{item}</span>
                 </li>
               ))}
