@@ -10,7 +10,9 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center">
-              <Image src="/logo.png" alt="Clean Park Logo" width={64} height={64} priority />
+              <span className="bg-white p-2 rounded-full flex items-center justify-center">
+  <Image src="/logo.png" alt="Clean Park Logo" width={64} height={64} priority />
+</span>
             </Link>
             <p className="text-[#4F4F4F] max-w-xs">
             Професионална автомивка на самообслужване със зарядна станция за електромобили и зона за кафе и студени напитки.
