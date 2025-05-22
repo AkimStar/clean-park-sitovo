@@ -129,7 +129,7 @@ export default function Navbar() {
           <div className="fixed inset-0 z-50 md:hidden min-h-screen min-w-full flex flex-col bg-white/80 backdrop-blur-2xl shadow-lg">
             <div className="absolute top-6 left-0 w-full flex items-center justify-between px-6">
               <Link href="/" className="flex items-center">
-                <Image src="/cleanparklogo.png" alt="Clean Park Logo" width={56} height={56} priority />
+                <Image src="/logo.png" alt="Clean Park Logo" width={56} height={56} priority />
               </Link>
               <button
                 className="flex items-center justify-center p-2 rounded-full hover:bg-white/30 transition"
